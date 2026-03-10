@@ -94,6 +94,12 @@
       gap: 0.8rem;
     }
 
+    .date-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
     label {
       font-weight: 600;
       font-size: 0.95rem;
@@ -107,6 +113,12 @@
       border-radius: 8px;
       font-size: 1rem;
       margin-top: 0.25rem;
+    }
+
+    @media (max-width: 640px) {
+      .date-row {
+        grid-template-columns: 1fr;
+      }
     }
 
     button {
@@ -179,15 +191,17 @@
           <input type="email" name="email" required />
         </label>
 
-        <label>
-          Data przyjazdu
-          <input type="date" name="checkin" required />
-        </label>
+        <div class="date-row">
+          <label>
+            Data przyjazdu
+            <input type="date" name="checkin" required />
+          </label>
 
-        <label>
-          Data wyjazdu
-          <input type="date" name="checkout" required />
-        </label>
+          <label>
+            Data wyjazdu
+            <input type="date" name="checkout" required />
+          </label>
+        </div>
 
         <label>
           Liczba gości
