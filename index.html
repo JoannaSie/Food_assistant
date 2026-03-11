@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hotel Figa | Rezerwacja nad jeziorem Głębokie</title>
   <style>
-    :root {
+    :root {/*TODO what is it*/
       --bg: #f4f7f2;
       --green: #244b35;
       --accent: #b27d3a;
@@ -13,7 +13,7 @@
       --card: #ffffff;
     }
 
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; } /*TODO what is it*/
 
     body {
       margin: 0;
@@ -32,7 +32,7 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-size: clamp(2rem, 6vw, 3.5rem); /*TODO what is clamp*/
       margin-bottom: 0.5rem;
     }
 
@@ -115,7 +115,7 @@
       margin-top: 0.25rem;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 640px) {/*TODO what is it*/
       .date-row {
         grid-template-columns: 1fr;
       }
@@ -133,7 +133,7 @@
       cursor: pointer;
     }
 
-    button:hover { filter: brightness(0.95); }
+    button:hover { filter: brightness(0.95); } /*TODO what is it*/
 
     .message {
       min-height: 1.2rem;
@@ -238,7 +238,7 @@
 
       if (checkout <= checkin) {
         message.style.color = "#b23030";
-        message.textContent = "Data wyjazdu musi być późniejsza niż data przyjazdu.";
+        message.textContent = "Data wyjazdu musi być późniejsza niż data przyjazdu."; /*TODO instead of this behaviour block dates that are not allowed? How does this page know those components?*/
         return;
       }
 
