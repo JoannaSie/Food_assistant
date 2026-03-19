@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seasonal Cycle Nutrition Planner</title>
+    <meta
+      name="description"
+      content="Aplikacja webowa do generowania prompta dla planu żywieniowego dopasowanego do fazy cyklu, sezonowości i kuchni polskiej."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card">
+        <p class="eyebrow">EDU Vibe prototyping</p>
+        <h1>Seasonal Cycle Nutrition Planner</h1>
+        <p class="lede">
+          Interaktywna aplikacja zamienia podany prompt w gotowy brief do Claude&apos;a lub innego LLM-a,
+          dopasowany do miesiąca i fazy cyklu menstruacyjnego.
+        </p>
+      </section>
+
+      <section class="grid-layout">
+        <div class="panel controls-panel">
+          <h2>Ustawienia</h2>
+
+          <label class="field">
+            <span>Aktualny miesiąc</span>
+            <select id="monthSelect"></select>
+          </label>
+
+          <label class="field">
+            <span>Faza cyklu</span>
+            <select id="phaseSelect"></select>
+          </label>
+
+          <div class="callout">
+            <strong>Priorytet dla wybranej fazy:</strong>
+            <p id="phaseFocus"></p>
+          </div>
+
+          <button type="button" class="primary-button" id="copyButton">Kopiuj gotowy prompt</button>
+          <p class="status-text" id="copyStatus" aria-live="polite"></p>
+        </div>
+
+        <div class="panel output-panel">
+          <div class="output-header">
+            <h2>Wygenerowany prompt</h2>
+            <span id="summaryText"></span>
+          </div>
+          <pre id="promptOutput"></pre>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
